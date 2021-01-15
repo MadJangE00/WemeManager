@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Weme Manager</title>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Weme Management</title>
+    </head>
+    <body>
+      <h1 href="index.html">WEME</h1>
+      <p>
+        <ul>
+          <li><a href="intro.html">소개</a></li>
+          <li><a href="project.html">프로젝트</a></li>
+          <li><a href="schedule.html">일정</a></li>
+          <li><a href="meeting.html">회의</a></li>
+          <li><a href="member.html">회원</a></li>
+          <li><a href="board.html">게시판</a></li>
+          <li><a href="help.html">문의</a></li>
+        </ul>
+      </p>
 
+      <p>
+        <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
 
-  </head>
-  <body>
-    <h1 href="index.html">WEMW</h1>
-    <p>
-      <ul>
-        <li><a href="intro.html">소개</a></li>
-        <li><a href="project.html">프로젝트</a></li>
-        <li><a href="schedule.html">일정</a></li>
-        <li><a href="meeting.html">회의</a></li>
-        <li><a href="member.html">회원</a></li>
-        <li><a href="board.html">게시판</a></li>
-        <li><a href="help.html">문의</a></li>
-      </ul>
-    </p>
+    <!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
+    <img id="img" src="dog.jpg"></img>
 
-<p>
-    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
-<!-- Load the MobileNet model. -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+    <!-- Place your code in the script tag below. You can also use an external .js file -->
+    <script>
+      // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
+      // available on the index-page because of the script tag above.
 
-<!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
-<img id="img" src="dog.jpg"></img>
+      const img = document.getElementById('img');
 
-<!-- Place your code in the script tag below. You can also use an external .js file -->
-<script>
-  // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
-  // available on the index-page because of the script tag above.
+      // Load the model.
+      mobilenet.load().then(model => {
+        // Classify the image.
+        model.classify(img).then(predictions => {
+          console.log('Predictions: ');
+          console.log(predictions);
+        });
+      });
+    </script>
+      </p>
 
-  const img = document.getElementById('img');
-
-  // Load the model.
-  mobilenet.load().then(model => {
-    // Classify the image.
-    model.classify(img).then(predictions => {
-      console.log('Predictions: ');
-      console.log(predictions);
-    });
-  });
-</script>
-</p>
-
-  </body>
-</html>
+    </body>
+  </html>
