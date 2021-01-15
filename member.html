@@ -3,9 +3,25 @@
     <head>
       <meta charset="utf-8">
       <title>Weme Management</title>
+      <style>
+
+
+      </style>
     </head>
     <body>
       <h1><a href="index.html">WEME</a></h1>
+
+      <input id="night_day" type="button" value="night" onclick="
+      if (documment.querySelector('#night_day').value ==='night'){
+      document.querySelector('body').style.backgroundColor ='black';
+      document.querySelector('body').style.colro = 'white';
+      document.querySelector('#night_day').value = 'day';
+    }else{
+      document.querySelector('body').style.backgroundColor ='white';
+      document.querySelector('body').style.colro = 'black';
+      document.querySelector('#night_day').value = 'night';
+    }
+    ">
       <p>
         <ul>
           <li><a href="intro.html">소개</a></li>
