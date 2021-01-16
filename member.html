@@ -11,18 +11,20 @@
     <body>
       <h1><a href="index.html">WEME</a></h1>
 
-      <input id="night_day" type="button" value="night" onclick="
-      if (documment.querySelector('#night_day').value ==='night'){
-      document.querySelector('body').style.backgroundColor ='black';
-      document.querySelector('body').style.colro = 'white';
-      document.querySelector('#night_day').value = 'day';
-    }else{
-      document.querySelector('body').style.backgroundColor ='white';
-      document.querySelector('body').style.colro = 'black';
-      document.querySelector('#night_day').value = 'night';
-    }
-    ">
-      <p>
+      <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if (this.value ==='night'){
+          target.style.backgroundColor ='black';
+          target.style.color = 'white';
+          this.value = 'day';
+        } else {
+          target.style.backgroundColor ='white';
+          target.style.color = 'black';
+          this.value = 'night';
+        }
+      ">
+
+<p>
         <ul>
           <li><a href="intro.html">소개</a></li>
           <li><a href="project.html">프로젝트</a></li>
@@ -32,13 +34,13 @@
           <li><a href="board.html">게시판</a></li>
           <li><a href="help.html">문의</a></li>
         </ul>
-      </p>
+</p>
 
-      <p>
+<p>
         회원 _데이터 베이스<br>
         이름/ 역할/ 간단 프로필
+</p>
 
-      </p>
 
     </body>
   </html>
