@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      h1{
+        margin:0px;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+      }
+      .one {
+        background-color: red;
+        grid-column: 1 / 3;
+        grid-row: 1;
+      }
+      .two {
+        background-color: blue;
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+      }
+      .three {
+        background-color: yellow;
+        grid-column: 1;
+        grid-row: 2 / 5;
+      }
+      .four {
+        background-color: green;
+        grid-column: 3;
+        grid-row: 3;
+      }
+      .five {
+        background-color: powderblue;
+        grid-column: 2;
+        grid-row: 4;
+      }
+      .six {
+        background-color: black;
+        color: white;
+        grid-column: 3;
+        grid-row: 4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <center>
+      <h1><a href="index.html"><img src="WEME.png" width="30%"></a></h1>
+      </center>
+    </div>
+    <div class="wrapper">
+      <div>
+        <ul>
+          <li class="one">소개</li>
+          <li class="two">일정</li>
+          <li class="three">맴버</li>
+          <li class="four">프로젝트</li>
+          <li class="five">게시판</li>
+          <li class="six">잡동사니</li>
+        </ul>
+      </div>
+      <div class="one">
+        소개
+      </div>
+      <div class="two">
+        일정
+      </div>
+      <div class="three">
+        맴버
+      </div>
+      <div class="four">
+        프로젝트
+      </div>
+      <div class="five">
+        게시판
+      </div>
+      <div class="six">
+        잡동사니
+      </div>
+      <div>
+
+        <p>main content</p>
+      </div>
+    </div>
+
+    <script>
+
+
+    </script>
+  </body>
+</html>
