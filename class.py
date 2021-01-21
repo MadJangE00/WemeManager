@@ -21,6 +21,10 @@ board = { 'writer' = 'user', 'title' = 'article title', 'content' = 'article det
 
 ## 클래스와 인스턴스
 
+def makeClass(dicName, *('keys', 'props')):
+     dicName = {'keys' : 'props'}
+user.keys()
+
 
 # 사람을 클래스로 두고
 # 인수롤 프로퍼티를 두고
