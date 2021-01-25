@@ -4,7 +4,54 @@
       <meta charset="utf-8">
       <title>Weme Management</title>
       <style>
-      
+        h1{
+          margin:0px;
+        }
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 10px;
+          grid-auto-rows: minmax(100px, auto);
+        }
+
+        .one {
+          background-color: red;
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
+
+        .two {
+          background-color: blue;
+          grid-column: 2 / 4;
+          grid-row: 1 / 3;
+        }
+
+        .three {
+          background-color: yellow;
+          grid-column: 1;
+          grid-row: 2 / 5;
+        }
+
+        .four {
+          background-color: green;
+          grid-column: 3;
+          grid-row: 3;
+        }
+
+        .five {
+          background-color: powderblue;
+          grid-column: 2;
+          grid-row: 4;
+        }
+
+        .six {
+          background-color: black;
+          color: white;
+          grid-column: 3;
+          grid-row: 4;
+        }
+
       </style>
 
 
@@ -13,13 +60,13 @@
       <h1 href="index.html">WEME</h1>
       <p>
         <ul>
-          <li><a href="intro.html">소개</a></li>
-          <li><a href="project.html">프로젝트</a></li>
-          <li><a href="schedule.html">일정</a></li>
-          <li><a href="meeting.html">회의</a></li>
-          <li><a href="member.html">회원</a></li>
-          <li><a href="board.html">게시판</a></li>
-          <li><a href="help.html">문의</a></li>
+          <li class="one"><a href="intro.html">소개</a></li>
+          <li class="two"><a href="project.html">프로젝트</a></li>
+          <li class="three"><a href="schedule.html">일정</a></li>
+          <li class="four"><a href="meeting.html">회의</a></li>
+          <li class="five"><a href="member.html">회원</a></li>
+          <li class="six"><a href="board.html">게시판</a></li>
+          <li class=""><a href="help.html">문의</a></li>
         </ul>
       </p>
 
