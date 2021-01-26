@@ -61,6 +61,18 @@
   <center>
     <h1><a href="index.html"><img src="WEME.png" width="30%"></a></h1>
   </center>
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value ==='night'){
+      target.style.backgroundColor ='black';
+      target.style.color = 'white';
+      this.value = 'day';
+    } else {
+      target.style.backgroundColor ='white';
+      target.style.color = 'black';
+      this.value = 'night';
+    }
+  ">
 </div>
       <div class="wrapper">
 
