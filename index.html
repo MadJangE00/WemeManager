@@ -10,7 +10,7 @@
 
         .wrapper {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           grid-gap: 10px;
           grid-auto-rows: minmax(100px, auto);
         }
@@ -51,16 +51,20 @@
           grid-column: 3;
           grid-row: 4;
         }
+        .seven {
+          background-color: powderblue;
+          grid-column: 4;
+
+        }
 
       </style>
-
-
     </head>
     <body>
 <div>
   <center>
     <h1><a href="index.html"><img src="WEME.png" width="30%"></a></h1>
   </center>
+</div>
   <input type="button" value="night" onclick="
     var target = document.querySelector('body');
     if (this.value ==='night'){
@@ -73,7 +77,7 @@
       this.value = 'night';
     }
   ">
-</div>
+
       <div class="wrapper">
 
       <h1 href="index.html">WEME</h1>
@@ -86,7 +90,7 @@
           <li class="four"><a href="meeting.html">회의</a></li>
           <li class="five"><a href="member.html">회원</a></li>
           <li class="six"><a href="board.html">게시판</a></li>
-          <li class=""><a href="help.html">문의</a></li>
+          <li class="seven"><a href="help.html">문의</a></li>
         </ul>
       </div>
 
