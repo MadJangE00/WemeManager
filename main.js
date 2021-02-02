@@ -1,7 +1,12 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync('db.json')
+const db = low(adapter)
 
+db.defaults({ user: [], project: []}).write();
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
