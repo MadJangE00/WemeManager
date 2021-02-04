@@ -63,11 +63,65 @@
         var score = 0
         var ant = 1
           while (timer > 0){
-            timer = timer -1;
+            timer = timer - 1;
             score = score + ant;
             ant = ant - 1;
           }
       </script>
+      <button onclick="startGame()">Start World</button>
+<button onclick="myFunction()">Hello World</button>
+
+  <script>
+    var timer = 0
+    var score = 0
+    var qAnt = 0
+    var jAnt = 0
+    var nAnt = 0
+    var ant = 0
+
+    function getRandom() {
+    return Math.random();
+    }
+    function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+    }
+
+    var startGame = function(){
+    document.getElementById("ant").innerHTML = "Hello Ants"
+    var getRan = getRandomInt(1, 5);
+    if (score === 0){
+    timer = 10;
+    qAnt = 1;
+    ant = qAnt*3 + jAnt*2 + nAnt;
+    score = score + ant;
+    console.log("time : " + timer);
+    console.log("score : " + score);
+    console.log(getRan);
+    } else if (timer > 0) {
+    timer = timer -1;
+    if (getRan === 1) {
+    qAnt = qAnt + 1;
+    } else if (getRan === 2){
+    jAnt = jAnt + qAnt;
+    } else {
+    nAnt = nAnt + qAnt;
+    }
+    ant = 3*qAnt + 2*jAnt + nAnt;
+    score = score + ant;
+    console.log("time : " + timer);
+    console.log("score : " + score);
+    console.log("Queen : " + qAnt,", Jack : "+ jAnt ,", Normal : "+ nAnt);
+    console.log(getRan);
+    } else {
+    console.log("<<<Game Over>>>");
+    console.log("score : " + score);
+    console.log("Queen : " + qAnt,", Jack : "+ jAnt ,", Normal : "+ nAnt);
+    console.log("Total : " + ant);
+    console.log(getRan);
+    }
+  </script>
     </head>
     <body>
 <div>
