@@ -88,6 +88,17 @@
     return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
     }
 
+    // attribute는 buffer에서 데이터를 받음
+    attribute vec4 a_position;
+
+    // 모든 shader는 main 함수를 가짐
+    void main() {
+
+      // gl_Position은 vertex shader가 설정을 담당하는 특수 변수
+      gl_Position = a_position;
+    }
+
+
     var startGame = function(){
     document.getElementById("ant").innerHTML = "Hello Ants"
     var getRan = getRandomInt(1, 5);
